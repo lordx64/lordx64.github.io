@@ -31,7 +31,7 @@ Modified DMG files have been used by malware in the past, such as in the CIA’s
 
 Shlayer is a very primitive piece of malware, but had different modifications including this [variant](https://securelist.com/shlayer-for-macos/95724/) **Trojan-Downloader.OSX.Shlayer.e** reported by Kaspersky back in Jan 2020 as it is written in Python instead of bash.
 
-Most of Shlayer has a bash script form like this variant **OSX/Shlayer.D** that I reported on back in 2019 [here](https://blog.confiant.com/osx-shlayer-new-shurprise-unveiling-osx-tarmac-f965a32de887) and SentionelOne [reported](https://www.sentinelone.com/blog/coming-out-of-your-shell-from-shlayer-to-zshlayer/) about **ZShlayer** in Septembre 2020, which is a variation of OSX/Shlayer.D that uses ZSH. There was also mach-O variant of Shlayer reported by UPTYCS [here](https://www.uptycs.com/blog/macos-bashed-apples-of-shlayer-and-bundlore) in July 2021, but no name was given to this variant specifically.
+Most of Shlayer has a bash script form like this variant **OSX/Shlayer.D** that I reported on back in 2019 [here](/malware-analysis/reverse-engineering/2019/09/24/osx-shlayer-new-shurprise-unveiling-osx-tarmac.html) and SentionelOne [reported](https://www.sentinelone.com/blog/coming-out-of-your-shell-from-shlayer-to-zshlayer/) about **ZShlayer** in Septembre 2020, which is a variation of OSX/Shlayer.D that uses ZSH. There was also mach-O variant of Shlayer reported by UPTYCS [here](https://www.uptycs.com/blog/macos-bashed-apples-of-shlayer-and-bundlore) in July 2021, but no name was given to this variant specifically.
 
 Shlayer has mainly been used as an installer/downloader, its main goal being to download adware like [Bundlore](https://www.uptycs.com/blog/macos-bashed-apples-of-shlayer-and-bundlore) (even though Bundlore can have its own installer as we reported [here](https://twitter.com/ConfiantIntel/status/1451641996800454660?s=20&t=K_UFB7t5SdtV9rIVzgV6gg)). But it can also download other Adware like the Cimpli installer as reported by Karspersky [here](https://securelist.com/shlayer-for-macos/95724/), etc.
 
@@ -116,7 +116,7 @@ rule OSX/Shlayer.F
 }
 ```
 
-String decryption as we saw in many of our [previous](https://blog.confiant.com/osx-hydromac-a-new-macos-malware-leaked-from-a-flashcards-app-2af28f1caa9e) blog posts is often enough to determine what the sample does in almost (if not all) MacOS Adware.
+String decryption as we saw in many of our [previous](/malware-analysis/reverse-engineering/2021/06/03/osx-hydromac-a-new-macos-malware-leaked-from-a-flashcards-ap.html) blog posts is often enough to determine what the sample does in almost (if not all) MacOS Adware.
 
 We have automated this string decryption process at scale for specific malware families including now **OSX/Shlayer.F**, and below is the output for this specific sample:
 
