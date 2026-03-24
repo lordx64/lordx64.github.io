@@ -89,6 +89,9 @@ exclude:
   - package*.json
   - convert_posts.py
 
+paginate: 10
+paginate_path: "/page/:num/"
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
