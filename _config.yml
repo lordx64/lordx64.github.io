@@ -1,5 +1,4 @@
 theme: jekyll-theme-chirpy
-remote_theme: cotes2020/jekyll-theme-chirpy
 
 lang: en
 timezone: America/New_York
@@ -91,7 +90,6 @@ exclude:
   - convert_posts.py
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
