@@ -1,0 +1,97 @@
+theme: jekyll-theme-chirpy
+remote_theme: cotes2020/jekyll-theme-chirpy
+
+lang: en
+timezone: America/New_York
+
+title: lordx64
+tagline: Security Research & Malware Analysis
+description: >-
+  Security research blog by taha aka "lordx64" — malware analysis, exploit development,
+  reverse engineering, web3 security, and threat intelligence.
+
+url: "https://lordx64.github.io"
+baseurl: ""
+
+github:
+  username: lordx64
+
+twitter:
+  username: lordx64
+
+social:
+  name: taha aka "lordx64"
+  email: tahacalypse@gmail.com
+  links:
+    - https://twitter.com/lordx64
+    - https://github.com/lordx64
+    - https://medium.com/@lordx64
+
+theme_mode: dark
+
+avatar: /assets/images/avatar.png
+
+toc: true
+
+comments:
+  provider: false
+
+analytics:
+  google:
+    id:
+
+pageviews:
+  provider:
+
+kramdown:
+  syntax_highlighter: rouge
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      pin: false
+  - scope:
+      path: _tabs
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - rollup.config.js
+  - package*.json
+  - convert_posts.py
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
